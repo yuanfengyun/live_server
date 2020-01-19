@@ -1,0 +1,20 @@
+root = "./skynet/"
+luaservice = root.."service/?.lua;"..root.."test/?.lua;"..root.."examples/?.lua;"..root.."test/?/init.lua"
+luacservice = "./skynet/cservice/?.so;"
+lualoader = root .. "lualib/loader.lua"
+lua_path = root.."lualib/?.lua;"..root.."lualib/?/init.lua"
+lua_cpath = root .. "luaclib/?.so"
+snax = root.."examples/?.lua;"..root.."test/?.lua"
+
+g_root = "./"
+luaservice = g_root.."service/?.lua;"..g_root.."service/?/main.lua;" .. luaservice
+lualoader = g_root .. "lualib/loader.lua;"..lualoader
+lua_path = g_root.."lualib/?.lua;"..g_root.."lualib/?/init.lua;"..lua_path
+lua_cpath = g_root .. "luaclib/?.so;" .. lua_cpath
+
+thread = 4
+logger = nil
+harbor = 0
+start = "main"
+bootstrap = "snlua bootstrap"
+-- daemon = "./skynet.pid"
